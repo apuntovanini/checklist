@@ -1,0 +1,131 @@
+.list {
+  .list-header {}
+  .list-items {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    li {
+      margin: 0 auto;
+      padding: 1.75em 0;
+      position: relative;
+    }
+    input[type="checkbox"] {
+      opacity: 0;
+      -webkit-appearance: none;
+      display: inline-block;
+      vertical-align: middle;
+      z-index: 100;
+      width: 50px;
+      height: 50px;
+      top: 50%;
+      left: 0;
+      margin-top: -25px;
+      position: absolute;
+      cursor: pointer;
+    }
+    label {
+      display: inline-block;
+      position: relative;
+      font-size: 1.75em;
+      padding: 0 0 0 80px;
+      vertical-align: top;
+      color: rgba(0,0,0,0.2);
+      cursor: pointer;
+      -webkit-transition: color 0.3s;
+      transition: color 0.3s;
+      font-weight: 400;
+      &:before {
+        width: 50px;
+        height: 50px;
+        top: 50%;
+        left: 0;
+        margin-top: -25px;
+        position: absolute;
+        cursor: pointer;
+        content: '';
+        border: 2px solid rgba(0,0,0,0.2);;
+        -webkit-transition: opacity 0.3s;
+        transition: opacity 0.3s;
+      }
+    }
+    svg {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 50%;
+      margin-top: -20px;
+      left: 5px;
+      pointer-events: none;
+    }
+  }
+  .list-clauses {}
+  .list-footer {
+    position: fixed;
+    display: block;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    box-shadow: 0 0 1px rgba(0,0,0,0.15);
+    z-index: 500;
+    width: 100%;
+    font-size: 14px;
+    background: #fff;
+    color: rgba(0,0,0,0.3);
+    padding: 0 10px 0 16px;
+    .list-footer-left {
+      position: relative;
+      z-index: 500;
+      float: left;
+      .list-author-avatar {
+        margin-right: 10px;
+        margin-top: 8px;
+        display: inline-block;
+        white-space: nowrap;
+        line-height: 32px;
+        vertical-align: top;
+      }
+      .list-author-dateline {
+        margin-top: 8px;
+        display: inline-block;
+        white-space: nowrap;
+        line-height: 32px;
+        vertical-align: top;
+      }
+    }
+    .list-footer-right {
+      position: relative;
+      z-index: 500;
+      float: right;
+      .btn {
+        margin-top: 8px;
+        padding: 4px 20px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.avatar--icon {
+  width: 32px;
+  height: 32px;
+}
+.avatar-image {
+  vertical-align: top;
+  width: 100%;
+  border-radius: 100%;
+  background: #f0f0f0;
+}
+.avatar-inline {
+  display: inline-block;
+  vertical-align: middle;
+}
+.avatar {
+  background-position: center;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 65px;
+  height: 65px;
+  line-height: 0;
+  background-size: cover;
+  border-radius: 100%;
+}
